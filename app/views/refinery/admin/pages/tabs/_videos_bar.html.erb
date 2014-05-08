@@ -1,0 +1,10 @@
+<div class='wym_area_top'>
+  <span class='clearfix label_inline_with_link'>
+    <%= link_to t('refinery.plugins.refinery_page_videos.add'), refinery.insert_videos_admin_videos_path({
+                  :dialog => true, :width => 950, :height => 510,
+                  :page_video => 1,
+                  :callback => "video_added"
+                }),
+                :id => "add_video_link" %>
+  </span>
+</div>

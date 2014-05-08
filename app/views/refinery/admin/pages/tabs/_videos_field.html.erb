@@ -1,0 +1,26 @@
+<% form_actions = capture do %>
+  <div class='form-actions'>
+    <div class='form-actions-left'>
+      <a class='button js-page-videos-done'><%= I18n.t('refinery.js.admin.page_videos.done') %></a>
+    </div>
+  </div>
+<% end %>
+
+<% modal_class = 'wym' %>
+
+<div class='wym_box field videos_field'>
+  <%#= hidden_field_tag "#{f.object_name.demodulize}[videos_attributes][-1]", "" %>
+  <ul id='page_videos' class='clearfix'>
+    <%= f.fields_for :videos do |video_form| %>
+      <li id='video_<%= video_form.object.id %>'>
+        <%= video_form.hidden_field :id %>
+        <%= video_form.object.to_html %>
+        <% index = video_form.object_name.split('[').last.split(']').first.to_i %>
+        <%= hidden_field_tag "#{f.object_name.demodulize}[videos_attributes][#{index}][page_video_id]", f.object.video_page_id_for_video_index(index) %>
+      </li>
+    <% end %>
+    <li class='js-page-videos-template'>
+      <%= hidden_field_tag "#{f.object_name.demodulize}[videos_attributes][#{f.object.videos.size}][id]" %>
+    </li>
+  </ul>
+</div>

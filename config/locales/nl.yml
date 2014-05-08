@@ -1,0 +1,6 @@
+nl:
+  refinery:
+    plugins:
+      refinery_page_videos:
+        tab_name: 'Video'
+        add: 'Aggiungi'

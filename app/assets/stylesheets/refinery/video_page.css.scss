@@ -1,0 +1,44 @@
+
+#page_videos {
+  li {
+    position: relative;
+    list-style: none;
+    width: 20%;
+    float: left;
+    margin: 10px 20px 20px 0;
+  }
+  .video_embeded {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    iframe, video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .video_actions {
+      position: absolute;
+      opacity: 1;
+      left: 0;
+      top: 0;
+      width: 20%;
+      * {
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+}
+
+a#add_video_link {
+  margin-top: 0;
+  line-height: 29px;
+  padding-left: 20px;
+  display: inline;
+  border-bottom: 0;
+  background: image-url('refinery/icons/add.png') no-repeat 0px 6px;
+}
