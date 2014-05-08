@@ -21,7 +21,7 @@ Add this line to your applications `Gemfile`
 
 ```ruby
 gem 'refinerycms-videojs', github: 'zuf/refinerycms-videojs'
-gem 'refinerycms-page-videos', github: 'geekcups-team/refinerycms-page-videos', branch:'2.1-stable'
+gem 'refinerycms-page_videos', github: 'geekcups-team/refinerycms-page-videos', branch:'2.1-stable'
 ```
 
 Next run
