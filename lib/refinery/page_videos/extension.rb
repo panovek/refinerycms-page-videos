@@ -4,8 +4,8 @@ module Refinery
       def has_many_page_videos
 
 
-        has_many :video_pages, :as => :page, :class_name => 'Refinery::VideoPage', :order => 'position ASC'
-        has_many :videos, :through => :video_pages, :class_name => '::Refinery::Videos::Video', :order => 'position ASC'
+        has_many :video_pages, :as => :page, :class_name => 'Refinery::VideoPage'#, :order => 'position ASC'
+        has_many :videos, :through => :video_pages, :class_name => '::Refinery::Videos::Video'#, :order => 'position ASC'
         # accepts_nested_attributes_for MUST come before def images_attributes=
         # this is because images_attributes= overrides accepts_nested_attributes_for.
 
@@ -47,7 +47,6 @@ module Refinery
         end
 
         include Refinery::PageVideos::Extension::InstanceMethods
-        attr_accessible :videos_attributes
       end
 
       module InstanceMethods

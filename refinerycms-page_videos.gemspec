@@ -12,9 +12,9 @@ Gem::Specification.new do |s|
   s.authors           = "Geekcups"
 
   # Runtime dependencies
-  s.add_dependency             'refinerycms-core',    '~> 2.1.2'
-  s.add_dependency    'refinerycms-pages', '~> 2.1.0'
+  s.add_dependency             'refinerycms-core'
+  s.add_dependency    'refinerycms-pages'
 
   # Development dependencies (usually used for testing)
-  s.add_development_dependency 'refinerycms-testing', '~> 2.1.2'
+  s.add_development_dependency 'refinerycms-testing'
 end
